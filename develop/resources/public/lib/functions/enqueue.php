@@ -3,6 +3,14 @@
  * スタイルとスクリプトのエンキュー
  */
 function theme_enqueue_styles_scripts() {
+  // Google Fonts
+  wp_enqueue_style(
+    'theme-fonts',
+    'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap',
+    array(),
+    null
+  );
+
   // CSSのエンキュー
   wp_enqueue_style(
     'theme-styles',

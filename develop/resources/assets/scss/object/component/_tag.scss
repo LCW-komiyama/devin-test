@@ -1,0 +1,40 @@
+.c-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem 0.6rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fff;
+  letter-spacing: 0.024rem;
+  white-space: nowrap;
+  background: #333;
+  border-radius: 0.2rem;
+
+  &--text {
+    padding-right: 0;
+    padding-left: 0;
+    color: #707070;
+    background: transparent;
+  }
+
+  &--line {
+    background: #14af53;
+  }
+
+  &--instagram {
+    background: linear-gradient(115deg, #feda75 0%, #fa7e1e 35%, #d62976 65%, #962fbf 85%, #4f5bd5 100%);
+  }
+
+  &--lg {
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+  }
+
+  &--outline {
+    color: #333;
+    background: #fff;
+    border: 0.1rem solid #f7f7f7;
+  }
+}

@@ -1,0 +1,623 @@
+// FV
+.p-top-fv {
+  padding: 12.4rem 0 4.6rem;
+  background: #f7f7f7;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 4rem;
+    padding-left: 6.4rem;
+  }
+
+  &__left {
+    flex-shrink: 0;
+    width: 56.4rem;
+    padding-top: 5rem;
+  }
+
+  &__en {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #333;
+    letter-spacing: 0.1rem;
+  }
+
+  &__title {
+    margin-top: 3rem;
+    font-size: 4.6rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #333;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 0.4rem;
+    margin-top: 5.9rem;
+    margin-left: -0.8rem;
+  }
+
+  &__card {
+    width: 18.4rem;
+    height: 18.1rem;
+    padding: 1.2rem 0.8rem;
+    background: #fff;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.08);
+  }
+
+  &__cardTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #333;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  &__cardLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 2rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding-bottom: 0.8rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #333;
+      white-space: nowrap;
+      border-bottom: 0.1rem solid #ddd;
+
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  &__cardBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    width: 100%;
+    height: 3.6rem;
+    margin-top: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fff;
+    white-space: nowrap;
+    background: #333;
+    border-radius: 0.5rem;
+
+    img {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 0.8rem;
+    align-items: flex-end;
+    width: 71.7rem;
+  }
+
+  &__slide {
+    position: relative;
+    width: 100%;
+    height: 44.8rem;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 1.6rem;
+  }
+
+  &__slideImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  &__slideCaption {
+    position: absolute;
+    right: 4rem;
+    bottom: 3.2rem;
+    left: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    color: #fff;
+
+    &::before {
+      position: absolute;
+      inset: -50% -10% -3.2rem;
+      z-index: -1;
+      content: "";
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+  }
+
+  &__slideText {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.032rem;
+  }
+
+  &__slideClient {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.026rem;
+    white-space: nowrap;
+
+    span {
+      font-family: $fontfamily-en;
+    }
+  }
+
+  &__pager {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+  }
+
+  &__dots {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+
+    li {
+      width: 0.4rem;
+      height: 0.4rem;
+      background: #b0b0b0;
+      border-radius: 50%;
+
+      &.is-active {
+        background: #333;
+      }
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  &__arrow {
+    width: 1.4rem;
+    height: 0.6rem;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    img {
+      width: 1.4rem;
+      height: 0.6rem;
+    }
+
+    &--prev {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+// セクション見出し
+.p-top-secHead {
+  background: #fff;
+
+  &__inner {
+    display: flex;
+    gap: 2.6rem;
+    align-items: flex-end;
+    max-width: 110rem;
+    padding: 6.4rem 0;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #333;
+    letter-spacing: 0.065rem;
+  }
+
+  .c-more {
+    margin-left: auto;
+  }
+}
+
+// サービス
+.p-top-service {
+  padding-bottom: 9.6rem;
+  background: #fff;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 110.2rem;
+    padding-top: 4rem;
+    margin: 0 auto;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+    margin-top: 3rem;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 1.6rem;
+    margin-top: 1.6rem;
+
+    li {
+      width: 35.6rem;
+    }
+  }
+}
+
+// 制作実績スライダー
+.p-top-works {
+  padding-bottom: 8.4rem;
+  overflow: hidden;
+  background: #fff;
+
+  .c-h4 {
+    max-width: 110rem;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    gap: 1.6rem;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+    margin-top: 5.1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .c-moreText {
+    margin: 4.6rem calc(50% - 55rem + 8.8rem) 0 auto;
+    float: right;
+  }
+}
+
+// マーケティング
+.p-top-marketing {
+  padding: 4rem 0 8.6rem;
+  background: #f7f7f7;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 110.2rem;
+    margin: 0 auto;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+    margin-top: 3rem;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 1.6rem;
+    margin-top: 1.6rem;
+
+    li {
+      width: 26.4rem;
+    }
+  }
+}
+
+// マーケティング事例
+.p-top-cases {
+  padding-bottom: 6.8rem;
+  overflow: hidden;
+  background: #f7f7f7;
+
+  .c-h4 {
+    max-width: 110rem;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    gap: 1.6rem;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+    margin-top: 5.1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .c-moreText {
+    margin: 3rem calc(50% - 55rem + 8.8rem) 0 auto;
+    float: right;
+  }
+}
+
+// クライアント
+.p-top-client {
+  padding: 7.2rem 0 8rem;
+  background: #fff;
+
+  &__head {
+    display: flex;
+    gap: 2.4rem;
+    align-items: flex-end;
+    max-width: 110rem;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #333;
+    letter-spacing: 0.065rem;
+    white-space: nowrap;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.8rem;
+    max-width: 109.6rem;
+    margin: 4.7rem auto 0;
+  }
+
+  &__cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    overflow: hidden;
+    background: #fff;
+    border: 0.1rem solid #ddd;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// お客様の声
+.p-top-voice {
+  padding: 4rem 0 8rem;
+  background: #fff;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 35.2rem);
+    gap: 4rem 2.2rem;
+    justify-content: center;
+    max-width: 110rem;
+    margin: 0 auto;
+  }
+}
+
+// オフィス画像
+.p-top-office {
+  line-height: 0;
+
+  img {
+    width: 100%;
+    height: 45.1rem;
+    object-fit: cover;
+  }
+}
+
+// メンバー
+.p-top-member {
+  padding-bottom: 0;
+  overflow: hidden;
+  background: #fff;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    li {
+      flex-shrink: 0;
+      width: 22rem;
+      height: 22rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// お知らせ・コラム
+.p-top-newsColumn {
+  display: flex;
+  gap: 5.4rem;
+  justify-content: center;
+  padding: 5.6rem 0 10rem;
+  background: #fff;
+}
+
+.p-top-news {
+  width: 52.1rem;
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #333;
+    letter-spacing: -0.035rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 2.4rem;
+  }
+
+  &__item a {
+    display: flex;
+    gap: 1.6rem;
+    align-items: flex-start;
+    font-size: 1.4rem;
+    line-height: 1.7;
+  }
+
+  &__meta {
+    display: flex;
+    flex-shrink: 0;
+    gap: 0.8rem;
+    align-items: center;
+    width: 14.9rem;
+    font-family: $fontfamily-en;
+    letter-spacing: 0.07rem;
+  }
+
+  &__date {
+    color: #707070;
+    white-space: nowrap;
+  }
+
+  &__cat {
+    color: #333;
+    white-space: nowrap;
+  }
+
+  &__itemTitle {
+    width: 35.6rem;
+    overflow: hidden;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 0.028rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__more {
+    float: right;
+    margin-top: 3.2rem;
+  }
+}
+
+.p-top-column {
+  width: 52.5rem;
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #333;
+    letter-spacing: -0.035rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-top: 2.4rem;
+  }
+
+  &__item a {
+    display: flex;
+    gap: 1.6rem;
+    align-items: flex-start;
+  }
+
+  &__thumb {
+    flex-shrink: 0;
+    width: 20rem;
+    height: 10.5rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 30.9rem;
+  }
+
+  &__itemTitle {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #333;
+    letter-spacing: 0.08rem;
+  }
+
+  &__meta {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    letter-spacing: 0.06rem;
+  }
+
+  &__date {
+    font-family: $fontfamily-en;
+    font-weight: 500;
+    color: #b0b0b0;
+  }
+
+  &__cat {
+    font-weight: 500;
+    color: #707070;
+  }
+
+  &__more {
+    float: right;
+    margin-top: 2.8rem;
+  }
+}
