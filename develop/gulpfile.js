@@ -1,8 +1,8 @@
 //テーマの名前
-const themeName = 'thema';
+const themeName = 'devin-test';
 
-//MAMPで設定したURL
-const url = 'http://*********';
+//ローカルWordPressのURL（空の場合はbrowserSyncがローカルの静的サーバーとして起動します）
+const url = 'http://devin-test.local/';
 
 /**
 * gulpfile.js is Revision. for develop
@@ -15,12 +15,12 @@ config.paths = {
   src: "./resources/",
 
   //削除先
-  clean: `../wp-content/themes/**`,
-  cleanIgnore: `../wp-content/themes/index.php`,
+  clean: `../themes/${themeName}/**`,
+  cleanIgnore: `../themes/${themeName}/.gitkeep`,
 
-  //生成先
-  path: `../wp-content/themes/`,
-  dest: `../wp-content/themes/${themeName}/`,
+  //生成先（WordPressのwp-content/themes/にシンボリックリンクするフォルダ）
+  path: `../themes/`,
+  dest: `../themes/${themeName}/`,
 
   //ブラウザの初期パス
   startPath: "/",
@@ -347,10 +347,17 @@ function startBrowserSync(done) {
     open : 'external',
     reloadOnRestart: true
   };
-  browserSync.init({
-    // MAMPで設定したURL
-    proxy: config.paths.proxy,
-  });
+  if (config.paths.proxy) {
+    browserSync.init({
+      // MAMPで設定したURL
+      proxy: config.paths.proxy,
+      open: 'external',
+      reloadOnRestart: true,
+    });
+  } else {
+    // WordPress未インストール時はビルド成果物を静的サーブする
+    browserSync.init(Opt_browserSync);
+  }
   done();
 }
 
