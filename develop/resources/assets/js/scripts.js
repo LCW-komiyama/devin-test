@@ -5,6 +5,8 @@
   let imgParallax = new ImgParallax('js-parallax');
   let inviewEvent = new InviewEvent('js-inview');
   let formConvert = new FormConvert('js-convert');
+  let fvSlider = new FvSlider('js-fvSlider');
+  let memberMarquee = new MemberMarquee('js-memberMarquee');
 })();
 
 //DOMContentLoaded

@@ -30,18 +30,30 @@
           <?php endforeach; ?>
         </ul>
       </div>
-      <div class="p-top-fv__slider">
-        <div class="p-top-fv__slide">
-          <img src="<?php echo $img_dir; ?>/top/fv-main.png" alt="" class="p-top-fv__slideImg">
-          <div class="p-top-fv__slideCaption">
-            <p class="p-top-fv__slideText">自社で更新・発信できる自走型の運営を実現。高貴さを表現したデザインでブランドイメージも向上</p>
-            <p class="p-top-fv__slideClient"><span>Client :</span>会計バンク株式会社</p>
+      <div class="p-top-fv__slider js-fvSlider">
+        <div class="p-top-fv__slides">
+          <?php
+          $fv_slides = array(
+            array('img' => 'fv-main.png', 'text' => '自社で更新・発信できる自走型の運営を実現。高貴さを表現したデザインでブランドイメージも向上', 'client' => '会計バンク株式会社'),
+            array('img' => 'office.png', 'text' => 'デザインとマーケティングの力で、事業の成長を支えるクリエイティブを提供します。', 'client' => 'Revision Inc.'),
+            array('img' => 'works-pc-1.png', 'text' => 'ブランドの世界観を保ちながら、成果につながるサイト設計を実現。', 'client' => 'ミッケ！ in ODAIBA'),
+          );
+          foreach ($fv_slides as $si => $slide) :
+          ?>
+          <div class="p-top-fv__slide<?php echo $si === 0 ? ' is-active' : ''; ?>">
+            <img src="<?php echo $img_dir; ?>/top/<?php echo esc_attr($slide['img']); ?>" alt="" class="p-top-fv__slideImg">
+            <div class="p-top-fv__slideCaption">
+              <p class="p-top-fv__slideText"><?php echo esc_html($slide['text']); ?></p>
+              <p class="p-top-fv__slideClient"><span>Client :</span><?php echo esc_html($slide['client']); ?></p>
+            </div>
           </div>
+          <?php endforeach; ?>
         </div>
         <div class="p-top-fv__pager">
-          <ul class="p-top-fv__dots">
-            <li class="is-active"></li>
-            <?php for ($i = 0; $i < 6; $i++) : ?><li></li><?php endfor; ?>
+          <ul class="p-top-fv__dots js-fvDots">
+            <?php foreach ($fv_slides as $si => $slide) : ?>
+            <li class="<?php echo $si === 0 ? 'is-active' : ''; ?>"></li>
+            <?php endforeach; ?>
           </ul>
           <div class="p-top-fv__arrows">
             <button type="button" class="p-top-fv__arrow p-top-fv__arrow--prev"><img src="<?php echo $img_dir; ?>/icon-slider-arrow.svg" alt="前へ"></button>
@@ -307,11 +319,13 @@
   </section>
 
   <section class="p-top-member">
-    <ul class="p-top-member__list">
-      <?php for ($i = 1; $i <= 7; $i++) : ?>
-      <li><img src="<?php echo $img_dir; ?>/top/member-<?php echo $i; ?>.png" alt="メンバー"></li>
-      <?php endfor; ?>
-    </ul>
+    <div class="p-top-member__marquee js-memberMarquee">
+      <ul class="p-top-member__track">
+        <?php for ($i = 1; $i <= 7; $i++) : ?>
+        <li><img src="<?php echo $img_dir; ?>/top/member-<?php echo $i; ?>.png" alt="メンバー"></li>
+        <?php endfor; ?>
+      </ul>
+    </div>
   </section>
 
   <!-- お知らせ / コラム -->
